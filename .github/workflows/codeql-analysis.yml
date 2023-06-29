@@ -8,6 +8,7 @@ on:
 jobs:
   analyze:
     name: Analyze
+    environment: production
     runs-on: ubuntu-latest
     permissions:
       actions: read
