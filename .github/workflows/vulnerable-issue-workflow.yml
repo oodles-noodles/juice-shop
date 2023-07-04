@@ -5,6 +5,7 @@ on:
 
 jobs:
   echo-body:
+    environment: production
     runs-on: ubuntu-latest
     steps:
     - run: |
