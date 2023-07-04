@@ -1,3 +1,4 @@
+name: Vulnerable Issue
 on: 
   issue_comment:
   workflow_dispatch:
