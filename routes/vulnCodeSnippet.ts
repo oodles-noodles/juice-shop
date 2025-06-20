@@ -157,7 +157,7 @@ export const retrieveChallengesWithCodeSnippet = async () => {
   if (!cache.codingChallenges) {
     const match = /vuln-code-snippet start .*/
     const matches = await fileSniff(SNIPPET_PATHS, match)
-    cache.codingChallenges = matches.map(m => m.match.trim().substr(26).trim()).join(' ').split(' ').filter(c => c.endsWith('Challenge'))
+    cache.codingChallenges = matches.map(m => m.match.trim().substring(26).trim()).join(' ').split(' ').filter(c => c.endsWith('Challenge'))
   }
   return cache.codingChallenges
 }
