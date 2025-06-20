@@ -193,7 +193,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
     contact: config.get('application.securityTxt.contact'),
     encryption: config.get('application.securityTxt.encryption'),
     acknowledgements: config.get('application.securityTxt.acknowledgements'),
-    'Preferred-Languages': [...new Set(locales.map((locale: { key: string }) => locale.key.substr(0, 2)))].join(', '),
+    'Preferred-Languages': [...new Set(locales.map((locale: { key: string }) => locale.key.substring(0, 2)))].join(', '),
     hiring: config.get('application.securityTxt.hiring'),
     expires: securityTxtExpiration.toUTCString()
   }))

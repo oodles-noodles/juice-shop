@@ -22,7 +22,7 @@ module.exports = function changePassword () {
     } else if (newPassword !== repeatPassword) {
       res.status(401).send(res.__('New and repeated password do not match.'))
     } else {
-      const token = headers.authorization ? headers.authorization.substr('Bearer='.length) : null
+      const token = headers.authorization ? headers.authorization.substring('Bearer='.length) : null
       const loggedInUser = security.authenticatedUsers.get(token)
       if (loggedInUser) {
         if (currentPassword && security.hash(currentPassword) !== loggedInUser.data.password) {

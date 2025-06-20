@@ -51,7 +51,7 @@ export class OAuthComponent implements OnInit {
   }
 
   parseRedirectUrlParams () {
-    const hash = this.route.snapshot.data.params.substr(1)
+    const hash = this.route.snapshot.data.params.substring(1)
     const splitted = hash.split('&')
     const params: any = {}
     for (let i = 0; i < splitted.length; i++) {

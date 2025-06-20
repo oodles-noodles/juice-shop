@@ -1,6 +1,6 @@
 {
     matcher: oauthMatcher,
-    data: { params: (window.location.href).substr(window.location.href.indexOf('#')) },
+    data: { params: (window.location.href).substring(window.location.href.indexOf('#')) },
     component: OAuthComponent
   },
   {
